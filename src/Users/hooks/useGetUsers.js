@@ -1,9 +1,10 @@
 import { getUsers } from "../util";
 import { useEffect, useState } from "react";
 export const useGetUsers = () => {
-  const [users, setUsers] = useState();
+  const [users, setUsers] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
     const fetchUsers = async () => {
       try {
